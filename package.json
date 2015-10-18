@@ -4,6 +4,10 @@
   "authors": [
     "Mathieu Débit <mathieu.debit@gmail.com>"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathieudebit/hashtag-tafeuille"
+  },
   "description": "Twitter battle App",
   "dependencies": {
     "express": "~4.9.7",

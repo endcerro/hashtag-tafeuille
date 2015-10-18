@@ -1,0 +1,13 @@
+{
+  "name": "hashtag-tafeuille",
+  "version": "1.0.0",
+  "authors": [
+    "Mathieu Débit <mathieu.debit@gmail.com>"
+  ],
+  "description": "Twitter battle App",
+  "dependencies": {
+    "express": "~4.9.7",
+    "socket.io": "^1.1.0",
+    "twitter": "^1.2.0"
+  }
+}

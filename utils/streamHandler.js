@@ -14,7 +14,6 @@ module.exports = function(stream, io){
       author: data['user']['name'],
       avatar: data['user']['profile_image_url'],
       body: data['text'],
-      date: data['created_at'],
       screenname: data['user']['screen_name'],
       blueKeyword: blueKeyword.test(data['text']),
       redKeyword: redKeyword.test(data['text'])

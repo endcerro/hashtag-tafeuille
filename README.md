@@ -14,7 +14,7 @@ npm install
 
 # Config
 
-Rename the `/utils/config` file by `/utils/config.js`.
+Rename the `/utils/your_config.js` file by `/utils/config.js`.
 
 You need to add your Twitter access tokens and configure the App:
 

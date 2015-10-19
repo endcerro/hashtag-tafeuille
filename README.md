@@ -18,7 +18,7 @@ Rename the `/utils/your_config.js` file by `/utils/config.js`.
 
 You need to add your Twitter access tokens and configure the App:
 
-- One keyword for `red` and `blue
+- One keyword for `red` and `blue`
 - multiples keywords for `others` (optionnal)
 - duration in seconds for `countdown`
 

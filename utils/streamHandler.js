@@ -11,6 +11,7 @@ module.exports = function(stream, io){
 
     var tweet = {
       twid: data['id'],
+      id_str: data['id_str'],
       author: data['user']['name'],
       avatar: data['user']['profile_image_url'],
       body: data['text'],

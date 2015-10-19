@@ -1,4 +1,4 @@
-var config = require('./utils/config');
+var config = require('./config');
 
 module.exports = function(stream, io){
   stream.on('data', function(data) {

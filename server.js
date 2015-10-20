@@ -21,14 +21,19 @@ var keywords = Object.keys(config.keywords).map(function(keyword){
   return config.keywords[keyword];
 }).join(', ');
 
+io.sockets.on('connection', function(socket){
+  console.log('New client connected');
+
+  var countdown = config.countdown;
+
+  setInterval(function() {
+    if (countdown > 0) {
+      countdown--;
+      io.sockets.emit('timer', countdown);
+    }
+  }, 1000);
+});
+
 twit.stream('statuses/filter',{ track: keywords}, function(stream){
   streamHandler(stream, io);
 });
-
-var countdown = config.countdown;
-setInterval(function() {
-  if (countdown > 0) {
-    countdown--;
-    io.sockets.emit('timer', countdown);
-  }
-}, 1000);

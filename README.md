@@ -46,4 +46,4 @@ module.exports = {
 ```
 node server.js
 ```
-Then visit http://localhost:8080/.
+Then connect the client App via Socket.io on http://localhost:8080/.

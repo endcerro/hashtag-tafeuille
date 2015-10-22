@@ -8,7 +8,7 @@ module.exports = {
 
   keywords: {
     blue: '',
-    red: '',
+    black: '',
     others: ''
   },
 

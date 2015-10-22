@@ -2,7 +2,7 @@
 
 **hashtag-tafeuille** is a Twitter Battle App build with Node.js for the #TaFeuille event.
 
-Two teams are fighting : Red vs Blue. Each team has a dedicaded keyword, and people tweets with the keyword to give a point.
+Two teams are fighting : Black vs Blue. Each team has a dedicaded keyword, and people tweets with the keyword to give a point.
 The app streams tweets depending on those keywords, and count them to award the winner.
 
 This is the server-side App, that provides data to a client-side App through Socket.io.
@@ -18,7 +18,7 @@ Rename the `/utils/your_config.js` file by `/utils/config.js`.
 
 You need to add your Twitter access tokens and configure the App:
 
-- One keyword for `red` and `blue`
+- One keyword for `black` and `blue`
 - multiples keywords for `others` (optionnal)
 - duration in seconds for `countdown`
 
@@ -33,7 +33,7 @@ module.exports = {
 
   keywords: {
     blue: '',
-    red: '',
+    black: '',
     others: ''
   },
 

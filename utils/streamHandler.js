@@ -4,7 +4,7 @@ module.exports = function(stream, io){
   stream.on('data', function(data) {
 
     var blueKeyword = new RegExp(config.keywords.blue,'i');
-    var redKeyword = new RegExp(config.keywords.red,'i');
+    var blackKeyword = new RegExp(config.keywords.black,'i');
 
     console.log(data['text']);
     console.log('_');
@@ -17,7 +17,7 @@ module.exports = function(stream, io){
       body: data['text'],
       screenname: data['user']['screen_name'],
       blueKeyword: blueKeyword.test(data['text']),
-      redKeyword: redKeyword.test(data['text'])
+      blackKeyword: blackKeyword.test(data['text'])
     };
 
     io.emit('tweet', tweet);

@@ -3,6 +3,7 @@ var http = require('http');
 var twitter = require('twitter');
 var config = require('./utils/config');
 var streamHandler = require('./utils/streamHandler');
+var donealready = 0;
 
 var app = express();
 var port = process.env.PORT || 8080;
@@ -23,14 +24,18 @@ var keywords = Object.keys(config.keywords).map(function(keyword){
 
 io.sockets.on('connection', function(socket){
   console.log('New client connected');
-
   var countdown = config.countdown;
 
   setInterval(function() {
-    if (countdown > 0) {
+    if (donealready>=5&&countdown > 0) {
       countdown--;
       io.sockets.emit('timer', countdown);
     }
+    else if (countdown>0) {
+      io.sockets.emit('timer',0-5-donealready)
+      donealready++;
+    }
+
   }, 1000);
 });
 
